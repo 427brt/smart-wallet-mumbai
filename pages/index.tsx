@@ -5,12 +5,14 @@ import { ACCOUNT_FACTORY_ADDRESS, NFT_CONTRACT_ADDRESS } from "../constants/addr
 import { useState } from "react";
 
 const embeddedWalletConfig = embeddedWallet({
+  /*
   styles: {
     borderRadius: "10px",
     colorBackground: "#232323",
     colorPrimary: "lightseagreen",
     colorText: "#FFFFFF",
   }
+  */
 });
 
 const metamaskWalletConfig = metamaskWallet();
