@@ -152,7 +152,7 @@
   height: 100vh;
 }
 .centeredCard {
-  background-color: #232323;
+  background-color: #8a1070;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   min-width: 500px;
@@ -187,7 +187,7 @@
   margin-bottom: 1rem;
   border-radius: 5px;
   border: none;
-  background-color: lightseagreen;
+  background-color: rgb(36, 182, 226);
   color: white;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
@@ -198,5 +198,5 @@
   cursor: not-allowed;
 }
 .centeredCard button:hover {
-  background-color: teal;
+  background-color: rgb(86, 223, 223);
 }

@@ -79,7 +79,7 @@ const Home: NextPage = () => {
                 {!isPersonalOwnedNFTsLoading && (
                   personalOwnedNFTs && personalOwnedNFTs.length > 0 ? (
                     personalOwnedNFTs.map((nft) => (
-                      <p key={nft.metadata.id}>QTY: {nft.quantityOwned}</p>
+                      <p key={nft.metadata.id}>Number of possessions: {nft.quantityOwned}</p>
                     ))
                   ) : (
                     <p>No NFTs owned.</p>
@@ -95,7 +95,7 @@ const Home: NextPage = () => {
                 {!isSmartOwnedNFTsLoading && (
                   smartOwnedNFTs && smartOwnedNFTs.length > 0 ? (
                     smartOwnedNFTs.map((nft) => (
-                      <p key={nft.metadata.id}>QTY: {nft.quantityOwned}</p>
+                      <p key={nft.metadata.id}>Number of possessions: {nft.quantityOwned}</p>
                     ))
                   ) : (
                     <p>No NFTs owned.</p>

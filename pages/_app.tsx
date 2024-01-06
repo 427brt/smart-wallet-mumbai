@@ -3,10 +3,7 @@ import { ThirdwebProvider, embeddedWallet, metamaskWallet, smartWallet } from "@
 import "../styles/globals.css";
 import { ACCOUNT_FACTORY_ADDRESS } from "../constants/addresses";
 
-// This is the chain your dApp will work on.
-// Change this to the chain your app is built for.
-// You can also import additional chains from `@thirdweb-dev/chains` and pass them directly.
-const activeChain = "goerli"; //MUMBAI is on the other side.
+const activeChain = "mumbai"; //Goerli is on the other side.
 
 function MyApp({ Component, pageProps }: AppProps) {
   const smartWalletConfig = {
