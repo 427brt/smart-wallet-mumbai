@@ -4,22 +4,21 @@ import { NextPage } from "next";
 import { ACCOUNT_FACTORY_ADDRESS, NFT_CONTRACT_ADDRESS } from "../constants/addresses";
 import { useState } from "react";
 
+const OPENSEA_LINK = `https://testnets.opensea.io/ja/account`;
+
 const embeddedWalletConfig = embeddedWallet({
-  /*
-  styles: {
-    borderRadius: "10px",
-    colorBackground: "#232323",
-    colorPrimary: "lightseagreen",
-    colorText: "#FFFFFF",
-  }
-  */
+  
 });
+
 
 const metamaskWalletConfig = metamaskWallet();
 
 const smartWalletConfig = smartWallet(embeddedWalletConfig, {
   factoryAddress: ACCOUNT_FACTORY_ADDRESS,
   gasless: true,
+  //clientId: process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID,
+  //bundlerUrl: "https://bundler.biconomy.io/api/v2/80001/nJPK7B3ru.dd7f7861-190d-41bd-af80-6877f74b8f44",
+  //paymasterUrl: "https://paymaster.biconomy.io/api/v1/80001/0lHU2YoNt.2440bbe3-9fe1-442e-b2a4-1125dee3059c",
 });
 
 const Home: NextPage = () => {
@@ -69,8 +68,9 @@ const Home: NextPage = () => {
           <div className={styles.centeredContainer}>
             <div className={styles.centeredCard}>
               <ConnectWallet />
-              <h1>Logged in!</h1>
-              <p>Personal Wallet: {personalWalletAddress}</p>
+              <h1>Connected to Mumbai</h1>
+              <p>Your Personal Wallet: {personalWalletAddress}</p>
+              <p><a href="https://testnets.opensea.io/ja/account" target="_blank">Here is the URL to your NFT</a></p>
               <Web3Button
                 contractAddress={NFT_CONTRACT_ADDRESS}
                 action={(contract) => contract.erc1155.claimTo(personalWalletAddress!, 0, 1)}

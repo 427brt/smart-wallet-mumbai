@@ -152,7 +152,7 @@
   height: 100vh;
 }
 .centeredCard {
-  background-color: #8a1070;
+  background-color: #2d2d2d;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   min-width: 500px;
