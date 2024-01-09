@@ -108,10 +108,10 @@ const Home: NextPage = () => {
           <div className={styles.centeredContainer}>
             <div className={styles.centeredCard}>
               <h1>Login</h1>
-              <p>Enter your email to login.</p>
+              <p>Enter text to login.</p>
               <input
                 type="email"
-                placeholder="Enter your email"
+                placeholder="Enter text"
                 value={emailInput}
                 onChange={(e) => setEmailInput(e.target.value)}
               />
